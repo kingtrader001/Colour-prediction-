@@ -14,10 +14,11 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
     background: linear-gradient(270deg, #001f1f, #000, #002f2f);
     background-size: 600% 600%;
     animation: bgMove 10s infinite alternate;
@@ -31,8 +32,9 @@ body {
 
 /* CARD */
 .card {
-    width: 330px;
-    padding: 20px;
+    width: 100%;
+    max-width: 330px;
+    padding: 12px;
     border-radius: 20px;
     backdrop-filter: blur(15px);
     background: rgba(0,255,200,0.05);
@@ -47,33 +49,35 @@ body {
     padding: 6px;
     border-radius: 20px;
     font-size: 12px;
-    margin-bottom: 15px;
+    margin: 5px 0px 5px;
     font-weight: bold;
 }
 
 /* IMAGE */
 .card img {
     width: 100%;
+    height: auto;
     border-radius: 15px;
     margin: 10px 0;
 }
 
 /* TITLE */
 .title {
-    font-size: 22px;
+    font-size: 17px;
     font-weight: bold;
-    color: #ffffff;   /* FIX */
+    color: #ffffff;
 }
 
 /* SUBTEXT */
 .sub {
-    color: #b2ffff;   /* FIX */
+    color: #b2ffff;
     margin-bottom: 10px;
 }
 
 /* BUTTON */
 .btn {
     display: block;
+    width: 100%;
     margin: 15px 0;
     padding: 14px;
     border-radius: 30px;
@@ -90,14 +94,15 @@ body {
     justify-content: center;
     gap: 12px;
     margin: 10px 0;
+    flex-wrap: wrap;
 }
 
 .box {
     background: #012f2f;
     padding: 10px;
     border-radius: 10px;
-    min-width: 65px;
-    color: #ffffff;  /* FIX */
+    min-width: 60px;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -114,7 +119,7 @@ body {
     text-align: left;
     margin-top: 12px;
     font-size: 14px;
-    color: #ffffff; /* FIX */
+    color: #ffffff;
 }
 
 .features p {
@@ -123,10 +128,21 @@ body {
 
 /* FOOTER */
 .footer {
-    margin-top: 12px;
+    margin-top: 6px;
     font-size: 13px;
     color: #00ffd5;
     font-weight: bold;
+}
+
+/* MOBILE EXTRA */
+@media (max-width: 400px) {
+    .title {
+        font-size: 16px;
+    }
+    .btn {
+        padding: 12px;
+        font-size: 14px;
+    }
 }
 </style>
 </head>
@@ -137,12 +153,12 @@ body {
 
     <div class="tag">🔥 LIMITED VIP ACCESS</div>
 
-    <a href="https://ibb.co/B2b43dnV"><img src="https://i.ibb.co/ch0b3MYc/IMG-20260403-WA0002.jpg" alt="IMG 20260403 WA0002" border="0"></a>
+    <a href="https://t.me/+H4BWY4xiFWoxYzdl"><img src="tg.jpeg" alt=""></a>
 
-    <div class="title">5X PROFIT VIP ROLEX</div>
+    <div class="title">⭐ONLY NUMBER PREDICTION⭐</div>
     <div class="sub">Join fast & start earning today</div>
 
-    <a href="https://t.me/+YhwlEz28fX42YzVl" class="btn">JOIN NOW</a>
+    <a href="https://t.me/+H4BWY4xiFWoxYzdl" class="btn">JOIN NOW</a>
 
     <div class="timer">
         <div class="box">
@@ -156,14 +172,18 @@ body {
     </div>
 
     <div class="counter" id="joinCounter">
-        130 People Joined Today
+        1308 People Joined Today
     </div>
+
     <div class="features">
         <p>⭐ 100% Winning Signal</p>
         <p>⭐ Loss Recovery System</p>
         <p>⭐ Daily Profit Guarantee</p>
+        <p>⭐Free Number Prediction Panel</p>
     </div>
+
 <br>
+
     <div class="footer">
         5+ Years Experience | 10 Lakh+ Profit
     </div>
@@ -182,7 +202,7 @@ setInterval(() => {
 },1000);
 
 // COUNTER
-let count = 130;
+let count = 1308;
 setInterval(() => {
     count += Math.floor(Math.random()*2);
     document.getElementById("joinCounter").innerText =
@@ -191,4 +211,4 @@ setInterval(() => {
 </script>
 
 </body>
-</html>            
+</html>
